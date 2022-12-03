@@ -1,7 +1,6 @@
 from src.utils import ProcessData
 from src.find_synonyms import synonym_extractor
-from random import choice
-import spacy, random
+import spacy, json
 
 
 class SemanticSort:
@@ -12,10 +11,10 @@ class SemanticSort:
 
 
     def __fitness_score(self, description: str) -> float:
-        sentance1 = self.__nlp(self.__requests)
-        sentance2 = self.__nlp(description)
+        sentence1 = self.__nlp(self.__requests)
+        sentence2 = self.__nlp(description)
 
-        return sentance1.similarity(sentance2)
+        return sentence1.similarity(sentence2)
 
     
     def sort_data(self, separator: int) -> list:
@@ -23,4 +22,12 @@ class SemanticSort:
 
         # return list(sorted(descriptions, 
         #               key=lambda x: self.__fitness_score(x), reverse=True))
-        return {i['name']: self.__fitness_score(i['description']) for i in self.__data.summary_data[:separator]}
+        
+        result = {i['name']: self.__fitness_score(i['description'])
+                for i in self.__data.summary_data[:separator]}
+
+        with open('result.json', 'w') as fp:
+            json.dump(result, fp)
+
+        return result
+        
