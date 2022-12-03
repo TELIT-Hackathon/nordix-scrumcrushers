@@ -29,7 +29,7 @@ class SemanticSort:
                 for i in summary}
 
     
-    def __json_preprocess(self, obj: dict):
+    def __json_preprocess(self, obj: dict) -> list:
         return [{"name" : key, "fitness": obj[key]} for key in obj]
 
 
