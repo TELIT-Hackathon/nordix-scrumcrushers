@@ -1,3 +1,3 @@
 # nordix-scrumcrushers
 
-## IZI 6k
+## Easy 6k
