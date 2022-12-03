@@ -37,6 +37,3 @@ class ProcessData:
         return {el["name"]: (el["rating"], el["description"])
                 for el in self.summary_data.values()}
 
-
-process = ProcessData()
-pprint(type(process.scores))
