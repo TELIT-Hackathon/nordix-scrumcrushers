@@ -1,1 +1,1 @@
-from sa import SemanticAnalyzer
+from .semantic_analyzer import SemanticAnalyzer
