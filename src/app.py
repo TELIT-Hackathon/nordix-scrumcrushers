@@ -5,7 +5,7 @@ st.write("""
 # HELLO!
 """)
 
-data1 = pd.read_json("data.json")
+data1 = pd.read_json("../data.json")
 
 df = pd.DataFrame(list(data1.get("summary")))
 del df["logo"], df["title"], df["addresses"], df["verificationStatus"]
