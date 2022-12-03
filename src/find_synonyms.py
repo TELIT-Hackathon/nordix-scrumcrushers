@@ -1,4 +1,6 @@
 import nltk
+# nltk.download('wordnet')
+# nltk.download('omw-1.4')
 
 
 def synonym_extractor(phrase: str) -> set:
