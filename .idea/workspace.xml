@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2d07108-6290-4b38-bc2d-5eb29ba93636" name="Changes" comment="" />
+    <list default="true" id="a2d07108-6290-4b38-bc2d-5eb29ba93636" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sa/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/semantic_sort/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sa/semantic_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/semantic_sort/semantic_analyzer.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -61,6 +66,11 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\GitHub repos\nordix-scrumcrushers\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.find_synonyms">
     <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="nordix-scrumcrushers" />
@@ -173,7 +183,7 @@
       <workItem from="1670083144367" duration="49000" />
       <workItem from="1670083218294" duration="1646000" />
       <workItem from="1670085138588" duration="2487000" />
-      <workItem from="1670087670935" duration="1271000" />
+      <workItem from="1670087670935" duration="1631000" />
     </task>
     <servers />
   </component>

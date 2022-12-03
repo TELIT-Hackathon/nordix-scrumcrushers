@@ -1,4 +1,4 @@
-from src.sa import SemanticAnalyzer
+from src import SemanticAnalyzer
 
 if __name__ == '__main__':
     request = "Introduce your business and what you do there.\n\nI'm the founder and CEO of Riskwolf, a Zurich-based insurtech startup."
