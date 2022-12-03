@@ -38,5 +38,3 @@ class ProcessData:
                 for el in self.summary_data.values()}
 
 
-process = ProcessData()
-pprint(type(process.scores))
