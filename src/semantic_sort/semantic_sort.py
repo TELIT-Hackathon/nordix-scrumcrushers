@@ -24,7 +24,7 @@ class SemanticSort:
         #               key=lambda x: self.__fitness_score(x), reverse=True))
         
         result = {i['name']: self.__fitness_score(i['description'])
-                for i in self.__data.summary_data[:separator]}
+                for i in self.__data.parse_summary()[:separator]}
 
         with open('result.json', 'w') as fp:
             json.dump(result, fp)
