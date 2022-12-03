@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nordix Challenge</title>
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/normalize.css" >
+</head>
+<body>
+    <h2 class="homeText">Fancy colors</h2>
+
+    <input class="searchSpace" type="text" id="search" placeholder="Search for your dream company..">
+    <button class="fancyButton">push</button>
+    <label for="search"></label>
+    <script>
+        let isOn = false;
+        button=document.getElementsByClassName("fancyButton")[0]
+        textarea=document.getElementsByClassName("searchSpace")[0]
+        textarea.oninput=function() {
+            if (this.value === "") {
+                button.classList.toggle("changeButton")
+                isOn = false;
+                return
+            }
+            if (!isOn) {
+                button.classList.toggle("changeButton")
+                isOn = true;
+            }
+        }
+    </script>
+
+</body>
+</html>
