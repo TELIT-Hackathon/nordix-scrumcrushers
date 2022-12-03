@@ -1,4 +1,4 @@
-from src.semantic_sort import SemanticSort
+from src.sort import SemanticSort
 from dotenv import load_dotenv
 
 load_dotenv()
