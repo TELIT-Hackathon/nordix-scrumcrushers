@@ -77,7 +77,6 @@ body {
 }
 
 .homeText {
-    /*    НАПИШИТЕ ПЖЛСТА КОД*/
     font-family: "Dancing Script", serif;
     font-size: 6rem;
     color: #F28C28;
@@ -88,6 +87,7 @@ body {
 
 .searchSpace {
     background-color: #292929;
+    margin-top: 3.5%;
     font-size: 2.5rem;
     width: 70vw;
     height: 10vh;

@@ -40,6 +40,17 @@
         <label for="search"></label>
     </form>
 </template>
+<template id="template-articles">
+        {{#articles}}
+        <article>
+            <h2>{{title}}</h2>
+            <p>
+                by {{author}}
+            </p>
+            <hr>
+        </article>
+        {{/articles}}
+</template>
 
 
 <script  type="module" src="../static/js/index.js"></script>

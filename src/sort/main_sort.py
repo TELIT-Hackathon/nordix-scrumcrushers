@@ -10,10 +10,8 @@ class MainSort:
         self.__semantic_sort = SemanticSort(request, data)
         self.__numeric_sort = NumericSort(data)
 
-
     def __json_preprocess(self, obj: dict) -> list:
-        return [{"name" : key, "fitness": obj[key]} for key in obj]
-
+        return [{"name": key, "fitness": obj[key]} for key in obj]
 
     def sort_data(self, count: int, rating_count: int) -> dict:
         sorted_semantic = self.__semantic_sort.sort_data(count)
@@ -21,5 +19,5 @@ class MainSort:
 
         with open('result.json', 'w') as fp:
             json.dump(self.__json_preprocess(sorted_numeric), fp)
-        
+
         return sorted_numeric
