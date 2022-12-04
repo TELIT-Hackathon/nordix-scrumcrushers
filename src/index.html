@@ -3,32 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Nordix Challenge</title>
-    <link rel="stylesheet" href="css/style.css" >
-    <link rel="stylesheet" href="css/normalize.css" >
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script">
 </head>
 <body>
-    <h2 class="homeText">Scrum Crushers</h2>
-
-    <input class="searchSpace" type="text" id="search" placeholder="Search for your dream company..">
-    <button class="fancyButton">send</button>
-    <label for="search"></label>
+<main id="router-view">
     <script>
-        let isOn = false;
-        button=document.getElementsByClassName("fancyButton")[0]
-        textarea=document.getElementsByClassName("searchSpace")[0]
-        textarea.oninput=function() {
-            if (this.value === "") {
-                button.classList.toggle("changeButton")
-                isOn = false;
-                return
-            }
-            if (!isOn) {
-                button.classList.toggle("changeButton")
-                isOn = true;
+        function showBtn(textarea) {
+            let isOn = false;
+            console.log("aboba")
+            let button = document.getElementsByClassName("fancyButton")[0]
+            // let textarea = document.getElementsByClassName("searchSpace")[0]
+            textarea.oninput = function () {
+                if (this.value === "") {
+                    button.classList.toggle("changeButton")
+                    isOn = false;
+                    return
+                }
+                if (!isOn) {
+                    button.classList.toggle("changeButton")
+                    isOn = true;
+                }
             }
         }
     </script>
-
+</main>
 </body>
 </html>
+
+<template id="template-welcome">
+    <h2 class="homeText">Scrum Crushers</h2>
+
+    <input oninput="showBtn(this)" class="searchSpace" type="text" id="search" placeholder="Search for your dream company..">
+    <button class="fancyButton">send</button>
+    <label for="search"></label>
+</template>
+
+
+<script  type="module" src="js/index.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
