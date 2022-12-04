@@ -3,6 +3,7 @@ import data from '../../result.json' assert {type: 'json'};
 import main_data from '../../data.json' assert {type: 'json'};
 
 function result_sort() {
+    window.isOn = true;
     let j = []
     j.push(data);
 
@@ -31,20 +32,19 @@ function result_sort() {
                     result.push(newArticle)
 
                     localStorage.myArticles = JSON.stringify(result);
-
                     articlesContainer.innerHTML += opinion2html(newArticle)
                 }
             }
         }
     }
-
+    window.scrollTo({top: 550, behavior: 'smooth'})
     console.log(result)
     return result;
 }
 
 function opinion2html(opinion) {
     return `
-			<section>
+			<section class="articleSection">
 			    <h2>${opinion.name}</h2>
                 <p>${opinion.description}</p>
 			</section>`;

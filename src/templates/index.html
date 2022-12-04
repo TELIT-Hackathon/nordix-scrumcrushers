@@ -11,18 +11,18 @@
 <main id="router-view">
     <script>
         function showBtn(textarea) {
-            let isOn = false;
+            window.isOn = false;
             let button = document.getElementsByClassName("fancyButton")[0]
             // let textarea = document.getElementsByClassName("searchSpace")[0]
             textarea.oninput = function () {
                 if (this.value === "") {
                     button.classList.toggle("changeButton")
-                    isOn = false;
+                    window.isOn = false;
                     return
                 }
                 if (!isOn) {
                     button.classList.toggle("changeButton")
-                    isOn = true;
+                    window.isOn = true;
                 }
             }
         }
@@ -40,19 +40,19 @@
         <label for="search"></label>
     </form>
 </template>
-<template id="template-articles" style="color: white">
-    <h1>HELLO WORLD!</h1>
+<!--<template id="template-articles" style="color: white">-->
+<!--    <h1>HELLO WORLD!</h1>-->
 
-        {{#articles}}
-        <article>
-<!--            <h2>{{name}}</h2>-->
-<!--            <p>-->
-<!--                by {{description}}-->
-<!--            </p>-->
-<!--            <hr>-->
-        </article>
-        {{/articles}}
-</template>
+<!--        {{#articles}}-->
+<!--        <article>-->
+<!--&lt;!&ndash;            <h2>{{name}}</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>&ndash;&gt;-->
+<!--&lt;!&ndash;                by {{description}}&ndash;&gt;-->
+<!--&lt;!&ndash;            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <hr>&ndash;&gt;-->
+<!--        </article>-->
+<!--        {{/articles}}-->
+<!--</template>-->
 
 <script type="module">
 </script>
