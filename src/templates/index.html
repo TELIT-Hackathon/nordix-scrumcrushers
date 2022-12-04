@@ -35,7 +35,7 @@
         <h2 class="homeText">Scrum Crushers</h2>
 
     <form method="post">
-        <input oninput="showBtn(this)" class="searchSpace" type="text" id="search" name="input_name" placeholder="Search for your dream company..">
+        <input onclick="window.sortRes()" oninput="showBtn(this)" class="searchSpace" type="text" id="search" name="input_name" placeholder="Search for your dream company..">
         <button class="fancyButton">send</button>
         <label for="search"></label>
     </form>
@@ -43,15 +43,24 @@
 <template id="template-articles">
         {{#articles}}
         <article>
-            <h2>{{title}}</h2>
+            <h2>{{name}}</h2>
             <p>
-                by {{author}}
+                by {{founded}}
             </p>
             <hr>
         </article>
         {{/articles}}
 </template>
 
+<script type="module">
+
+    import sort from './routes.js';
+
+    document.addEventListener('load', e => {
+        sort();
+    });
+
+</script>
 
 <script  type="module" src="../static/js/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

@@ -1,8 +1,8 @@
-// import Mustache from "../js/mustache.js";
+import Mustache from "../js/mustache.js";
 import data from '../../result.json' assert {type: 'json'};
 import main_data from '../../data.json' assert {type: 'json'};
 
-function result_sort() {
+export default function result_sort() {
     let j = []
     j.push(data);
 
@@ -48,10 +48,10 @@ function result_sort() {
         }
     }
 
-    console.log(result)
+    Mustache.render(document.getElementById('template-articles').innerHTML, result.slice(5))
 }
 
-export default [
+[
 
     {
         //the part after '#' in the url (so-called fragment):
@@ -66,21 +66,10 @@ export default [
     {
         hash: "articles",
         target: "router-view",
-        getTemplate: createHtml
+        getTemplate: result_sort
     }
 ];
 
-// function createHtml(targetElm){
-//     let opinionsFromStorage = result_sort();
-//     console.log(opinionsFromStorage)
-//     let opinions=opinionsFromStorage;
-//     if(opinionsFromStorage){
-//         document.getElementById(targetElm).innerHTML = Mustache.render(
-//             document.getElementById("template-solutions").innerHTML,
-//             opinions
-//         );
-//     }
-// }
 
 // function fetchAndDisplayArticles() {
 //     let opinionsFromStorage = result_sort();
