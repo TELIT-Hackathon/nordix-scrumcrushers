@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Nordix Challenge</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/normalize.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script">
 </head>
 <body>
@@ -32,13 +32,15 @@
 </html>
 
 <template id="template-welcome">
-    <h2 class="homeText">Scrum Crushers</h2>
+        <h2 class="homeText">Scrum Crushers</h2>
 
-    <input oninput="showBtn(this)" class="searchSpace" type="text" id="search" placeholder="Search for your dream company..">
-    <button class="fancyButton">send</button>
-    <label for="search"></label>
+    <form method="post">
+        <input oninput="showBtn(this)" class="searchSpace" type="text" id="search" name="input_name" placeholder="Search for your dream company..">
+        <button class="fancyButton">send</button>
+        <label for="search"></label>
+    </form>
 </template>
 
 
-<script  type="module" src="js/index.js"></script>
+<script  type="module" src="../static/js/index.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

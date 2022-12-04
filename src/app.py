@@ -1,15 +1,23 @@
-import pandas as pd
-import streamlit as st
+from flask import Flask, render_template, request
+from sort import MainSort
 
-st.write("""
-# HELLO!
-""")
 
-data1 = pd.read_json("../data.json")
+app = Flask(__name__, template_folder="./templates")
 
-df = pd.DataFrame(list(data1.get("summary")))
-del df["logo"], df["title"], df["addresses"], df["verificationStatus"]
-x = st.slider("Select element", min_value=0, max_value=len(df))
-st.write(x, """ # Summary Data """, df.iloc[x].tolist())
 
-# st.write("""# Scores Data""", df2)
+@app.route('/')
+def render():
+    return render_template("index.html")
+
+
+@app.route('/', methods=['POST'])
+def input_data():
+    if request.method == 'POST':
+        data = request.form['input_name']
+        main_sort = MainSort(str(data))
+        print(main_sort.sort_data(20, 5))
+        return render_template("index.html")
+
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=3000)
