@@ -3,4 +3,3 @@ import Routes from "./routes.js";
 
 
 window.router = new Router(Routes,"welcome");
-window.sortRes = result_sort

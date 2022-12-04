@@ -32,34 +32,29 @@
 </html>
 
 <template id="template-welcome">
-        <h2 class="homeText">Scrum Crushers</h2>
+    <h2 class="homeText">Scrum Crushers</h2>
 
     <form method="post">
-        <input onclick="window.sortRes()" oninput="showBtn(this)" class="searchSpace" type="text" id="search" name="input_name" placeholder="Search for your dream company..">
-        <button class="fancyButton">send</button>
+        <input oninput="showBtn(this)" class="searchSpace" type="text" id="search" name="input_name" placeholder="Search for your dream company..">
+        <button class="fancyButton"><a href="#articles">send</a></button>
         <label for="search"></label>
     </form>
 </template>
-<template id="template-articles">
+<template id="template-articles" style="color: white">
+    <h1>HELLO WORLD!</h1>
+
         {{#articles}}
         <article>
-            <h2>{{name}}</h2>
-            <p>
-                by {{founded}}
-            </p>
-            <hr>
+<!--            <h2>{{name}}</h2>-->
+<!--            <p>-->
+<!--                by {{description}}-->
+<!--            </p>-->
+<!--            <hr>-->
         </article>
         {{/articles}}
 </template>
 
 <script type="module">
-
-    import sort from './routes.js';
-
-    document.addEventListener('load', e => {
-        sort();
-    });
-
 </script>
 
 <script  type="module" src="../static/js/index.js"></script>
