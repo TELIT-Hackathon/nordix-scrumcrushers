@@ -1,1 +1,1 @@
-from .semantic_sort import SemanticSort
+from .main_sort import MainSort

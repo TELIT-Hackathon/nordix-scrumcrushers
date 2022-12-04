@@ -1,3 +1,3 @@
 from .find_synonyms import synonym_extractor
-from .sort import SemanticSort
+from .sort import MainSort
 from .utils import ProcessData

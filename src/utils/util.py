@@ -1,9 +1,9 @@
-import json
-import os
+from dotenv import load_dotenv
+import json, os
 
 
 class ProcessData:
-
+    load_dotenv()
     def __init__(self, filepath=os.getenv("FILEPATH")):
         self.__filepath: str = filepath
         self.data = self.__open()
